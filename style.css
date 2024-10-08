@@ -1,100 +1,58 @@
 body {
     font-family: Arial, sans-serif;
-    text-align: center;
-    padding: 50px;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
 }
 
 h1 {
     color: #333;
 }
 
-.controls {
-    margin: 20px 0;
-}
-
 select {
+    margin-bottom: 20px;
     padding: 10px;
-    font-size: 16px;
 }
 
-#imageContainer {
+#imageGallery {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 30px;
 }
 
-.image-item {
-    margin: 10px;
-}
-
-.image-item img {
+#imageGallery img {
     width: 200px;
     height: auto;
-    border: 2px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
+    margin: 10px;
     cursor: pointer;
     transition: transform 0.2s;
 }
 
-.image-item img:hover {
+#imageGallery img:hover {
     transform: scale(1.05);
 }
 
-/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
     z-index: 1;
-    padding-top: 60px;
+    padding-top: 100px;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgb(0,0,0);
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
-.modal-content {
+.modal img {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
-}
-
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
+    max-width: 80%;
 }
 
 .close {
-    position: absolute;
-    top: 30px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
+    color: white;
+    float: right;
+    font-size: 28px;
     font-weight: bold;
-    transition: 0.3s;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
 }
