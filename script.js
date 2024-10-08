@@ -34,3 +34,15 @@ fetch('manifest.json')
         });
     })
     .catch(error => console.error('Error fetching manifest:', error));
+
+// Modal functionality
+function openModal(imgUrl) {
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    modalImage.src = imgUrl;
+    modal.style.display = 'block';
+}
+
+document.getElementById('closeModal').onclick = function() {
+    document.getElementById('modal').style.display = 'none';
+};
